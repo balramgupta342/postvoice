@@ -44,10 +44,19 @@ npm install
 npm run dev
 ```
 
+### Setup API Key
+1. Get a free **Gemini API key** from [Google AI Studio](https://aistudio.google.com/app/apikey)
+2. Create a `.env` file in the project root:
+   ```
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+3. Restart the dev server and you're ready to generate posts!
+
 ## Tech Stack
-- **React 18** — UI
-- **Vite** — dev server & bundler
-- **Claude API** (Anthropic) — post generation
+- **React 18** — UI framework
+- **Vite** — dev server & bundler  
+- **Gemini 2.5 Flash API** — AI post generation
+- **CSS Variables** — theming & responsive design
 
 ## Roadmap
 - [ ] LinkedIn data export (CSV) parser
@@ -55,3 +64,5 @@ npm run dev
 - [ ] Post history & saved drafts
 - [ ] Character limit warning (LinkedIn = 3000 chars)
 - [ ] Dark/light theme toggle
+- [ ] Post scheduling integration
+- [ ] Hashtag recommendations
