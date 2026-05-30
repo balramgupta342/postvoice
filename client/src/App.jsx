@@ -1,10 +1,10 @@
 import "./styles/global.css";
-import { usePostGenerator } from "./hooks/usePostGenerator";
-import StepIndicator   from "./components/StepIndicator";
-import Step1PastPosts  from "./components/Step1PastPosts";
-import Step2Topic      from "./components/Step2Topic";
-import Step3Loading    from "./components/Step3Loading";
-import Step4Result     from "./components/Step4Result";
+import { usePostGenerator } from "./features/postGenerator/hooks/usePostGenerator";
+import StepIndicator from "./features/postGenerator/components/StepIndicator";
+import Step1PastPosts from "./features/postGenerator/components/Step1PastPosts";
+import Step2Topic from "./features/postGenerator/components/Step2Topic";
+import Step3Loading from "./features/postGenerator/components/Step3Loading";
+import Step4Result from "./features/postGenerator/components/Step4Result";
 
 export default function App() {
   const {
