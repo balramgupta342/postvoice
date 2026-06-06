@@ -1,11 +1,12 @@
 const STEP_LABELS = {
   1: "Your past posts",
-  2: "What to post about",
-  3: "Generating...",
-  4: "Your post is ready",
+  2: "Writing DNA",
+  3: "What to post about",
+  4: "Generating...",
+  5: "Your post is ready",
 };
 
-const TOTAL_STEPS = 4;
+const TOTAL_STEPS = 5;
 
 export default function StepIndicator({ currentStep }) {
   return (

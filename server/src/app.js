@@ -16,6 +16,17 @@ app.use(express.json({ limit: "10mb" }));
 app.use(rateLimit);
 
 // ── Health Check ──────────────────────────────────────────────
+app.get("/", (_, res) => {
+  res.json({ 
+    status: "ok", 
+    message: "PostVoice API Server",
+    endpoints: {
+      health: "/api/health",
+      posts: "/api/posts/generate"
+    }
+  });
+});
+
 app.get("/api/health", (_, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });

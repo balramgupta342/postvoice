@@ -6,7 +6,7 @@ export default function Step2Topic({ topic, setTopic, postType, setPostType, onB
   return (
     <div className="fade-in">
       <div style={cardStyle}>
-        <div style={stepLabel}>STEP 2 OF 3</div>
+        <div style={stepLabel}>STEP 3 OF 4</div>
         <h2 style={heading}>What do you want to post about?</h2>
 
         {/* Topic input */}

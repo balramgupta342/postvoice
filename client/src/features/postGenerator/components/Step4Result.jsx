@@ -1,7 +1,16 @@
 import { useState } from "react";
 import { POST_TYPES } from "../../../../../shared/constants/postTypes";
+import { StyleMatchDashboard } from "./StyleMatchDashboard";
 
-export default function Step4Result({ generatedPost, postType, onRegenerate, onReset }) {
+export default function Step4Result({
+  generatedPost,
+  postType,
+  styleMatch,
+  originalAnalysis,
+  generatedAnalysis,
+  onRegenerate,
+  onReset,
+}) {
   const [copied, setCopied] = useState(false);
   const postTypeObj = POST_TYPES.find((p) => p.id === postType);
 
@@ -13,6 +22,15 @@ export default function Step4Result({ generatedPost, postType, onRegenerate, onR
 
   return (
     <div className="fade-in">
+      {/* Style Match Dashboard */}
+      {styleMatch && (
+        <StyleMatchDashboard
+          styleMatch={styleMatch}
+          originalAnalysis={originalAnalysis}
+          generatedAnalysis={generatedAnalysis}
+        />
+      )}
+
       {/* Post card */}
       <div style={cardStyle}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
@@ -44,9 +62,8 @@ export default function Step4Result({ generatedPost, postType, onRegenerate, onR
 
       {/* Tip */}
       <div style={tipCard}>
-        💡 <strong style={{ color: "var(--text-muted)" }}>Tip:</strong> If it doesn't sound
-        like you yet, add more of your posts in Step 1 — the more samples, the better the
-        voice matching.
+        💡 <strong style={{ color: "var(--text-muted)" }}>Tip:</strong> Use the Writing DNA Match
+        score as a guide. If it's below 75%, try adding more diverse posts in Step 1.
       </div>
     </div>
   );

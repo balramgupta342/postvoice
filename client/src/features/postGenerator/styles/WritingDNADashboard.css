@@ -1,0 +1,262 @@
+.writing-dna-dashboard {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dna-header {
+  margin-bottom: 24px;
+  border-bottom: 2px solid rgba(59, 89, 152, 0.1);
+  padding-bottom: 16px;
+}
+
+.dna-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.dna-summary {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Classification Cards */
+.classification-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #3b5998;
+}
+
+.tone-card {
+  border-left-color: #3b5998;
+}
+
+.readability-card {
+  border-left-color: #e74c3c;
+}
+
+.consistency-card {
+  border-left-color: #27ae60;
+}
+
+.card-label {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.card-value {
+  display: block;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+/* Metrics Section */
+.metrics-section {
+  margin-bottom: 24px;
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.metrics-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 700;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 12px;
+}
+
+.score-row {
+  margin-bottom: 16px;
+}
+
+.score-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.score-value {
+  color: #3b5998;
+  font-weight: 700;
+}
+
+.score-bar {
+  height: 8px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.score-fill.professional {
+  background: linear-gradient(90deg, #3b5998, #5b7fbb);
+}
+
+.score-fill.storytelling {
+  background: linear-gradient(90deg, #e74c3c, #ec7063);
+}
+
+.score-fill.engagement {
+  background: linear-gradient(90deg, #f39c12, #f5b041);
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.detail-item {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.detail-label {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.detail-value {
+  display: block;
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+/* Analysis Grid */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.analysis-section {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.analysis-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.strengths h4::before {
+  content: '✓';
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.weaknesses h4::before {
+  content: '!';
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.analysis-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.analysis-section li {
+  padding: 8px 0;
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.analysis-section li.empty {
+  color: #999;
+  font-style: italic;
+  padding: 12px 0;
+}
+
+.checkmark {
+  color: #27ae60;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.cross {
+  color: #e74c3c;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .writing-dna-dashboard {
+    padding: 16px;
+  }
+
+  .classification-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-section h3 {
+    font-size: 14px;
+  }
+
+  .score-label {
+    font-size: 12px;
+  }
+}
